@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thamer Alonazi</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./script.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="light">
+  <div id="particles-js"></div>
+  <header>
+    <button onclick="toggleMode()">☀ / 🌙</button>
+    <button onclick="toggleLang()">🌐 EN / عربي</button>
+  </header>
+  <section class="intro">
+    <h1><span id="typing-text"></span><span class="cursor">|</span></h1>
+  </section>
+  <main>
+    <section class="about animate">
+      <h2 data-en="About Me" data-ar="عنّي">About Me</h2>
+      <p data-en="I'm Thamer, an IT & Digital Innovation enthusiast." data-ar="أنا ثامر، شغوف بتقنية المعلومات والابتكار الرقمي.">I'm Thamer, an IT & Digital Innovation enthusiast.</p>
+    </section>
+    <section class="skills animate">
+      <h2 data-en="Skills" data-ar="مهاراتي">Skills</h2>
+      <ul>
+        <li data-en="Web Development" data-ar="تطوير الويب">Web Development</li>
+        <li data-en="Project Management" data-ar="إدارة المشاريع">Project Management</li>
+        <li data-en="Cybersecurity Awareness" data-ar="الوعي السيبراني">Cybersecurity Awareness</li>
+      </ul>
+    </section>
+    <section class="experience animate">
+      <h2 data-en="Experience" data-ar="الخبرات">Experience</h2>
+      <p data-en="5+ years in the energy and IT sector." data-ar="أكثر من ٥ سنوات في قطاع الطاقة وتقنية المعلومات.">5+ years in the energy and IT sector.</p>
+    </section>
+    <section class="contact animate">
+      <h2 data-en="Contact Me" data-ar="تواصل معي">Contact Me</h2>
+      <form action="https://formspree.io/f/moqgdvbj" method="POST">
+        <input type="text" name="name" placeholder="Name / الاسم" required>
+        <input type="email" name="_replyto" placeholder="Email / البريد الإلكتروني" required>
+        <textarea name="message" placeholder="Message / الرسالة" required></textarea>
+        <button type="submit" data-en="Send" data-ar="إرسال">Send</button>
+      </form>
+    </section>
+    <footer>
+      <div class="social">
+        <a href="https://www.instagram.com/thameralonazi/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://t.me/thameralonazi" target="_blank"><i class="fab fa-telegram"></i></a>
+        <a href="mailto:tha.alonazi@gmail.com"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+966557973470"><i class="fas fa-phone"></i></a>
+      </div>
+      <p>© 2025 Thamer Alonazi</p>
+    </footer>
+  </main>
+
+<!-- tsParticles library -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@3.3.0/tsparticles.bundle.min.js"></script>
+<script>
+  tsParticles.load("particles-js", {
+    fullScreen: { enable: false },
+    particles: {
+      number: { value: 60 },
+      color: { value: "#888" },
+      shape: { type: "circle" },
+      opacity: { value: 0.5 },
+      size: { value: 3 },
+      move: { enable: true, speed: 1 }
+    },
+    interactivity: {
+      events: {
+        onHover: { enable: true, mode: "repulse" }
+      }
+    }
+  });
+</script>
+
+</body>
+</html>

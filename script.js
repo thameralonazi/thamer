@@ -24,8 +24,23 @@ function type() {
 type();
 
 function toggleMode() {
-  document.body.classList.toggle("dark");
+  const body = document.body;
+  const btn = document.getElementById("mode-toggle");
+  body.classList.toggle("dark");
+  const isDark = body.classList.contains("dark");
+  btn.innerText = isDark ? "☀" : "🌙";
+  localStorage.setItem("theme", isDark ? "dark" : "light");
 }
+
+// Load saved theme
+document.addEventListener("DOMContentLoaded", () => {
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark");
+    const btn = document.getElementById("mode-toggle");
+    if(btn) btn.innerText = "☀";
+  }
+});
 function toggleLang() {
   lang = lang === "en" ? "ar" : "en";
   document.documentElement.lang = lang;
